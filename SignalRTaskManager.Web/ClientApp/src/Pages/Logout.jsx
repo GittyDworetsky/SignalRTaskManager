@@ -10,7 +10,7 @@ const Logout = () => {
 
     useEffect(() => {
         const doLogout = async () => {
-            await axios.get('/api/user/logout');
+            await axios.get('/api/guest/logout');
             setUser(null);
             navigate('/login');
         }

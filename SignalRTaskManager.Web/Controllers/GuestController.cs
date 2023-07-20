@@ -59,5 +59,12 @@ namespace SignalRTaskManager.Web.Controllers
             return repo.GetByEmail(User.Identity.Name);
         }
 
+        [HttpGet]
+        [Route("logout")]
+        public void Logout()
+        {
+            HttpContext.SignOutAsync().Wait();
+        }
+
     }
 }
